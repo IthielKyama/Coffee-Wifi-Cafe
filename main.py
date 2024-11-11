@@ -21,14 +21,7 @@ class CafeForm(FlaskForm):
     power_outlet = SelectField('Power Outlet Rating', choices=["✘", "🔌", "🔌🔌", "🔌🔌🔌", "🔌🔌🔌🔌", "🔌🔌🔌🔌🔌"], validators=[DataRequired()])
     submit = SubmitField('Submit')
 
-# Exercise:
 
-# make coffee/wifi/power a select element with choice of 0 to 5.
-# e.g. You could use emojis ☕️/💪/✘/🔌
-# ---------------------------------------------------------------------------
-
-
-# all Flask routes below
 @app.route("/")
 def home():
     return render_template("index.html")
